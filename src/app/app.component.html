@@ -1,11 +1,16 @@
-<mat-drawer-container class="example-container" [hasBackdrop]="true">
-    <mat-drawer #drawer mode="side" class="sidenave-container">
+<mat-drawer-container class="example-container" [hasBackdrop]="true" >
+    <mat-drawer #drawer mode="side" class="sidenave-container" opened="true">
         <div>
             <img src='../assets/logo.png' class="logo">
+            <span class="center-align">STITCHER</span>            
         </div>
     </mat-drawer>
     <mat-drawer-content>
-        <mat-icon (click)="drawer.toggle()">menu</mat-icon>
+        <div class="title">
+            
+            <mat-icon (click)="drawer.toggle()" class="pd-8">menu</mat-icon>
+
+        </div>
         <router-outlet></router-outlet>
     </mat-drawer-content>
 </mat-drawer-container>
