@@ -5,7 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './modules/login/login.component';
 import { HomeModule } from './modules/home/home.module';
-import { SidebarModule } from './modules/sidebar/sidebar.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -16,7 +19,13 @@ import { SidebarModule } from './modules/sidebar/sidebar.module';
     BrowserModule,
     AppRoutingModule,
     HomeModule,
-    SidebarModule
+    ReactiveFormsModule, 
+    MatIconModule,
+    MatSidenavModule,    
+    BrowserAnimationsModule 
+  ],
+  exports : [
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
