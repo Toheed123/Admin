@@ -22,10 +22,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ReactiveFormsModule, 
     MatIconModule,
     MatSidenavModule,    
-    BrowserAnimationsModule 
+    BrowserAnimationsModule, 
   ],
   exports : [
-    MatIconModule
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
