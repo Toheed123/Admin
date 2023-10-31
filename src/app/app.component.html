@@ -2,22 +2,21 @@
     <mat-drawer #drawer mode="side" class="sidenave-container" opened="true">
         <div>
             <img src='../assets/logo.png' class="logo">
-            <span class="center-align">STITCHER</span>            
+            <span class="center-align">STITCHER</span><hr>      
         </div>
     </mat-drawer>
-        <div>
-            <p>
-            <mat-toolbar color="primary" class="title-toolbar">
+        <div>            
+            <mat-toolbar  class="title-toolbar">
                 <mat-toolbar-row>
-                    <div>
-                        <button mat-icon-button>
-                            <mat-icon (click)="drawer.toggle()" class="pd-8">menu</mat-icon>
-                        </button>
-                          <span class="size">STITCHER</span>
-                    </div>
+                            <mat-icon (click)="drawer.toggle()" class="pd-8 color">menu</mat-icon>
+                            <div class="size">
+                                <span>STITCHER</span> &nbsp;
+                                <mat-icon class="right-arrow">keyboard_arrow_right</mat-icon> &nbsp;
+                                <span >HOME</span>
+
+                            </div>      
                 </mat-toolbar-row>               
-            </mat-toolbar>
-        </p>
+            </mat-toolbar>        
         </div>
         <router-outlet></router-outlet>
 </mat-drawer-container>
