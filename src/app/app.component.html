@@ -5,12 +5,20 @@
             <span class="center-align">STITCHER</span>            
         </div>
     </mat-drawer>
-    <mat-drawer-content>
-        <div class="title">
-            
-            <mat-icon (click)="drawer.toggle()" class="pd-8">menu</mat-icon>
-
+        <div>
+            <p>
+            <mat-toolbar color="primary" class="title-toolbar">
+                <mat-toolbar-row>
+                    <div>
+                        <button mat-icon-button>
+                            <mat-icon (click)="drawer.toggle()" class="pd-8">menu</mat-icon>
+                        </button>
+                          <span class="size">STITCHER</span>
+                    </div>
+                </mat-toolbar-row>               
+            </mat-toolbar>
+        </p>
         </div>
         <router-outlet></router-outlet>
-    </mat-drawer-content>
 </mat-drawer-container>
+
