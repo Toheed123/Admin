@@ -10,11 +10,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar'; 
+import { SideMenuComponent } from './modules/sidemenu/sidemenu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    SideMenuComponent
   ],
   imports: [
     BrowserModule,
@@ -24,7 +26,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     MatIconModule,
     MatSidenavModule,    
     BrowserAnimationsModule, 
-    MatToolbarModule
+    MatToolbarModule,
+
   ],
   exports : [
     MatIconModule,
