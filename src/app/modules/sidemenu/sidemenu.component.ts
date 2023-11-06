@@ -21,13 +21,16 @@ export class SideMenuComponent {
 
     ngOnInit(){
         this.sharedService.sideMenuName.subscribe((val) => {
-            console.log(val)
         });
+
+        this.route.params.subscribe((val) => {
+            console.log(val)
+        })
     }
 
     navigate(name: string) {
-        this.sharedService.sideMenuName.next(name);        
-        // this.router.navigate(['.../home'], {relativeTo: this.route})
-        this.router.navigateByUrl('/login')
+        this.sharedService.sideMenuName.next(name);
+        let url = name.toLowerCase();        
+        this.router.navigate([url], {relativeTo: this.route})
     }
 }

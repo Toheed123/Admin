@@ -10,12 +10,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar'; 
 import { CommonModule } from '@angular/common';
 import { SideMenuComponent } from './modules/sidemenu/sidemenu.component';
+import { ListModule } from './modules/list/list.module';
+import { pageNotFoundComponent } from './modules/pageNotFound/pageNotFound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    SideMenuComponent
+    SideMenuComponent,
+    pageNotFoundComponent
   ],
   imports: [
     CommonModule,
@@ -25,7 +28,8 @@ import { SideMenuComponent } from './modules/sidemenu/sidemenu.component';
     MatIconModule,
     MatSidenavModule,    
     BrowserAnimationsModule, 
-    MatToolbarModule
+    MatToolbarModule,
+    ListModule,
   ],
   exports : [
     MatIconModule,

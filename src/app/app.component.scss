@@ -62,3 +62,17 @@ $warn-light: mat.get-color-from-palette($app-warn, lighter);
     font-size: 30px;
 }
 
+.icon-size{
+    font-size: 28px;
+    padding-right: 6px;
+}
+
+.login-btn{
+    margin-left: auto;  
+}
+
+.img{
+    border-radius: 50%;
+    height: 45px;
+    cursor: pointer;
+}

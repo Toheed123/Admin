@@ -13,8 +13,15 @@
                             <mat-icon (click)="drawer.toggle()" class="pd-8 color">menu</mat-icon>
                             <div class="size">
                                 <span>STITCHER</span> &nbsp;
-                                <mat-icon class="right-arrow">keyboard_arrow_right</mat-icon> &nbsp;
-                                <span >HOME</span>
+                                <span *ngIf="name">
+                                    <mat-icon class="right-arrow">keyboard_arrow_right</mat-icon> &nbsp;
+                                    <mat-icon class="icon-size">{{iconName}}</mat-icon>
+                                    <span>{{name}}</span>
+                                </span>                               
+                            </div>
+
+                            <div class="login-btn">
+                                <img src="../assets/logo.png" class="img">
                             </div>      
                 </mat-toolbar-row>               
             </mat-toolbar>        
