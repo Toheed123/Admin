@@ -9,11 +9,13 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar'; 
 import { CommonModule } from '@angular/common';
+import { SideMenuComponent } from './modules/sidemenu/sidemenu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    SideMenuComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +29,7 @@ import { CommonModule } from '@angular/common';
   ],
   exports : [
     MatIconModule,
-  ],
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
