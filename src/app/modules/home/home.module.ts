@@ -13,12 +13,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HomeComponent,
   ],
   imports: [
-    CommonModule,
+    // CommonModule,
     HomeRoutingModule,
     ReactiveFormsModule, 
-    MatIconModule,
+    // MatIconModule,
     MatSidenavModule,    
-    BrowserAnimationsModule,
+    // BrowserAnimationsModule,
     // MatFormFieldModule
   ]
 })
