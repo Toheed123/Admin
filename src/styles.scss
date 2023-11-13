@@ -32,3 +32,5 @@ $warn-light: mat.get-color-from-palette($app-warn, lighter);
     -webkit-font-feature-settings: 'liga';
     -webkit-font-smoothing: antialiased;
   }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
