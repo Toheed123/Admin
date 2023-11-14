@@ -9,6 +9,7 @@ const routes: Routes = [
   { path : 'demo' , component: DemoComponent},
   { path: 'home', loadChildren: () => import('./modules/home/home.module').then( m => m.HomeModule)},
   { path: 'list',  loadChildren : () => import('./modules/list/list.module').then(m => m.ListModule)},
+  { path : 'dashboard', loadChildren : () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule)},
 
   //if url not found or match
 

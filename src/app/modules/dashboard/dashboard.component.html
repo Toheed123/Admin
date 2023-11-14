@@ -1,0 +1,23 @@
+<div class="main-container" fxLayout="row" fxLayoutAlign="space-around center" >
+    <div *ngFor="let data of dashboardContent" style="width: 33.33%;">
+
+        <mat-card class="example-card color">
+            <mat-card-content>
+                <div class="container">
+                    <div>
+                        <img class="img-size" src='../../../assets/{{data.imagename}}'>
+                    </div>
+                    <div class="pl-15">
+                        <p>{{data.name}}
+                        <p>
+                        <p class="count" *ngIf="!data.amountYN">{{data.Count}}</p>
+                        <p class="count" *ngIf="data.amountYN">{{data.Count | currency }} </p>
+                    </div>
+                </div>
+            </mat-card-content>
+        </mat-card>
+
+
+    </div>
+
+</div>

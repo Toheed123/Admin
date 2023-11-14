@@ -1,0 +1,32 @@
+
+.main-container{
+    display: flex;
+    padding: 20px;
+    
+}
+.example-card {
+    max-width: 300px;
+    margin-bottom: 8px;
+    box-shadow: 10px 10px #C6C5D0;
+  }
+
+  .img-size{
+    width: 80px;
+    height: 80px
+  }
+
+//   .color{
+//     background-color: lightgreen
+//   }
+.container{
+  display: flex;
+  align-items: center;
+}
+
+.pl-15{
+  padding-left: 15px;
+}
+
+.count{
+  font-weight: bold;
+}

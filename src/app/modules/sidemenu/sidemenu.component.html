@@ -1,10 +1,14 @@
 <div class="main-container">
     <div class="menu-container">
-        <mat-icon class='menu-icon' (click)="navigate('Home')">home</mat-icon>
-        <span class="menu-text-home">Home</span>            
+        <mat-icon class='menu-icon' (click)="navigate('Dashboard')">dashboard</mat-icon>
+        <span class="menu-text-dashboard">Dashboard</span>            
     </div>
     <div>
-        <mat-icon class='menu-icon' (click)="navigate('List')">view_list</mat-icon>
-        <span class="menu-text-list">List</span>
+        <mat-icon class='menu-icon' (click)="navigate('Products')">view_module</mat-icon>
+        <span class="menu-text-list">Products</span>
+    </div>
+    <div class="menu-container">
+        <mat-icon class='menu-icon' (click)="navigate('Orders')">add_shopping_cart</mat-icon>
+        <span class="menu-text-home">Orders</span>            
     </div>
 </div>
