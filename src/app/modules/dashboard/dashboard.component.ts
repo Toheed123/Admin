@@ -37,4 +37,60 @@ export class DashboardComponent {
 
         }
     ]
+
+    GraphData = [
+        {
+            date: 'Jan 2023',
+            amount: 2300
+        },
+        {
+            date: 'Feb 2023',
+            amount: 40000
+        },
+        {
+            date: 'March 2023',
+            amount: 67500
+        }
+    ]
+
+  dataPoints:any = [];
+  chart:any;
+ 
+  constructor() {  
+    for(let i= 0 ; i >= 10; i++){
+
+        this.dataPoints.push({x: 10, y: 49 });
+    }
+  }
+ 
+  chartOptions = {
+    theme: "light2",
+    zoomEnabled: true,
+    exportEnabled: true,
+    title: {
+      text:"Sales Status"
+    },
+    subtitles: [{
+      text: "Loading Data...",
+      fontSize: 24,
+      horizontalAlign: "center",
+      verticalAlign: "center",
+      dockInsidePlotArea: true
+    }],
+    axisY: {
+    //   title: "Closing Price (in USD)",
+      prefix: "$"
+    },
+    data: [{
+      type: "line",
+    //   name: "Closing Price",
+      yValueFormatString: "$#,###.00",
+      xValueType: "dateTime",
+      dataPoints: this.dataPoints
+    }]
+  }
+ 
+  getChartInstance(chart: object) {
+    this.chart = chart;
+  }
 }
