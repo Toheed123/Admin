@@ -1,11 +1,10 @@
-<mat-drawer-container class="example-container" [hasBackdrop]="true" >
+<mat-drawer-container class="example-container">
     <mat-drawer #drawer mode="side" class="sidenave-container" opened="true">
         <div>
             <img src='../assets/logo.png' class="logo">
             <span class="center-align">STITCHER</span><hr style="width: 50%;">      
         </div>
-        <app-sidemenu></app-sidemenu>   
-        
+        <app-sidemenu></app-sidemenu>        
     </mat-drawer>
         <div>            
             <mat-toolbar  class="title-toolbar">
@@ -15,11 +14,10 @@
                                 <span>STITCHER</span> &nbsp;
                                 <span *ngIf="name">
                                     <mat-icon class="right-arrow">keyboard_arrow_right</mat-icon> &nbsp;
-                                    <mat-icon class="icon-size">{{iconName}}</mat-icon>
+                                    <!-- <mat-icon class="icon-size">{{iconName}}</mat-icon> -->
                                     <span>{{name}}</span>
                                 </span>                               
                             </div>
-
                             <div class="login-btn">
                                 <img src="../assets/logo.png" class="img">
                             </div>      
