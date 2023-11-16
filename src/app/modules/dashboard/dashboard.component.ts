@@ -35,7 +35,9 @@ export class DashboardComponent {
   ];
   title = 'ng-chart';
   chart: any = [];
+  orderChart :any = [];
   chartData: any;
+  ordersChartData : any;
   labelName = [
     'January',
     'February',
@@ -61,8 +63,19 @@ export class DashboardComponent {
       options: {
         scales: {
           y: {
-            beginAtZero: true,
-            
+            beginAtZero: true,            
+          },
+        },
+      },
+    });
+
+    this.orderChart = new Chart('orderChart', {
+      type: 'doughnut',
+      data: this.ordersChartData,
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true,             
           },
         },
       },
@@ -101,5 +114,28 @@ export class DashboardComponent {
         },
       ],
     };
+    //  
+    this.ordersChartData = {
+      labels: [
+        'Order Pending',
+        'Order Completed',
+      ],
+      datasets: [{
+        label: 'Order Status',
+        data: [50, 100],
+        backgroundColor: [
+          'rgba(255, 99, 132, 0.2)',
+          'rgba(75, 192, 192, 0.2)',
+          // 'rgb(255, 205, 86)'
+        ],
+        borderColor :[
+          'rgb(255, 99, 132)',
+          'rgb(75, 192, 192)',
+        ],
+        hoverOffset: 4
+      }]
+    };
   }
+
+ 
 }

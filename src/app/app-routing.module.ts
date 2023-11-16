@@ -8,14 +8,15 @@ const routes: Routes = [
   { path: 'login' , component: LoginComponent },
   { path : 'demo' , component: DemoComponent},
   { path: 'home', loadChildren: () => import('./modules/home/home.module').then( m => m.HomeModule)},
+  { path : 'orders' , loadChildren : () => import('./modules/order/order.module').then ( m => m.OrderModule)},
   { path: 'list',  loadChildren : () => import('./modules/list/list.module').then(m => m.ListModule)},
   { path : 'dashboard', loadChildren : () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule)},
 
   //if url not found or match
 
-  { path: '' , redirectTo : "/home", pathMatch:'full'},
+  { path: '' , redirectTo : "/dashboard", pathMatch:'full'},
   {path: '**' , component: pageNotFoundComponent},
-  { path: '404-nit-found' , component : pageNotFoundComponent}
+  { path: '404-not-found' , component : pageNotFoundComponent}
 
 ];
 

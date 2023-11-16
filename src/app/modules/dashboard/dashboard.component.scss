@@ -33,9 +33,19 @@
 }
 
 .chart-section{
-  width: 800px;
-  height: 500px;
+  display: flex;  
   margin-top: 30px;
+  justify-content: space-around;
+}
+
+.bar-chart{
+  width: 850px !important;
+  height: 400px !important;
+}
+
+.order-chart{
+  width: 370px;
+  height: 350px;
 }
 
 .main-container1{
