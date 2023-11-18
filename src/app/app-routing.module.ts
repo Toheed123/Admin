@@ -11,6 +11,7 @@ const routes: Routes = [
   { path : 'orders' , loadChildren : () => import('./modules/order/order.module').then ( m => m.OrderModule)},
   { path: 'list',  loadChildren : () => import('./modules/list/list.module').then(m => m.ListModule)},
   { path : 'dashboard', loadChildren : () => import('./modules/dashboard/dashboard.module').then(m => m.DashboardModule)},
+  { path : 'products' , loadChildren : () => import('./modules/product/product.module').then( m => m.ProductModule)},
 
   //if url not found or match
 

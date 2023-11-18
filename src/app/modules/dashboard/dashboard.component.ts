@@ -117,20 +117,22 @@ export class DashboardComponent {
     //  
     this.ordersChartData = {
       labels: [
-        'Order Pending',
-        'Order Completed',
+        ' Pending Order',
+        ' Completed Order',
+        'Newe Order'
       ],
       datasets: [{
         label: 'Order Status',
-        data: [50, 100],
+        data: [50, 100, 40],
         backgroundColor: [
           'rgba(255, 99, 132, 0.2)',
           'rgba(75, 192, 192, 0.2)',
-          // 'rgb(255, 205, 86)'
+          'rgba(255, 205, 86, 0.2)',
         ],
         borderColor :[
           'rgb(255, 99, 132)',
           'rgb(75, 192, 192)',
+          'rgb(255, 205, 86)',
         ],
         hoverOffset: 4
       }]
