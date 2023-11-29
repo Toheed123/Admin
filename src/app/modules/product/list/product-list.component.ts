@@ -13,7 +13,7 @@ interface Transaction {
 
 
 export class ProductListComponent{
-    displayedColumns: string[] = ['ProductID', 'Name', 'Quantity','' ];
+    displayedColumns: string[] = ['item' , 'cost' ];
     transactions: Transaction[] = [
       {item: 'Beach ball', cost: 4},
       {item: 'Towel', cost: 5},

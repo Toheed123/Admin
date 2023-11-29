@@ -23,9 +23,7 @@ export class SideMenuComponent {
         this.sharedService.sideMenuName.subscribe((val) => {
         });
 
-        this.route.params.subscribe((val) => {
-            console.log(val)
-        })
+        
     }
 
     navigate(name: string) {
