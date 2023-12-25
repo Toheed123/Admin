@@ -3,10 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './modules/login/login.component';
 import { pageNotFoundComponent } from './modules/pageNotFound/pageNotFound.component';
 import { DemoComponent } from './modules/demo/demo.component';
+import { underConstruction } from './modules/underConstruction/underConstruction.component';
 
 const routes: Routes = [
   { path : 'login' , component: LoginComponent },
   { path : 'demo' , component: DemoComponent},
+  { path : 'underConstruction', component : underConstruction},
   { path : 'home', loadChildren: () => import('./modules/home/home.module').then( m => m.HomeModule)},
   { path : 'orders' , loadChildren : () => import('./modules/order/order.module').then ( m => m.OrderModule)},
   { path : 'list',  loadChildren : () => import('./modules/list/list.module').then(m => m.ListModule)},

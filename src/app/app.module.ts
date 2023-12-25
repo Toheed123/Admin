@@ -17,6 +17,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule} from '@angular/material/input';
 import { FormsModule} from '@angular/forms';
 import { FlexLayoutModule } from "@angular/flex-layout";
+import { OrderModule } from './modules/order/order.module';
+import { underConstruction } from './modules/underConstruction/underConstruction.component';
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     LoginComponent,
     SideMenuComponent,
     pageNotFoundComponent,
-    DemoComponent
+    DemoComponent,
+    underConstruction
   ],
   imports: [
     CommonModule,
@@ -40,7 +43,8 @@ import { FlexLayoutModule } from "@angular/flex-layout";
     MatFormFieldModule,
     MatInputModule,
     FormsModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    // OrderModule
     // MatMenuModule;
   ],
   exports : [
