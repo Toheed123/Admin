@@ -19,6 +19,9 @@ import { FormsModule} from '@angular/forms';
 import { FlexLayoutModule } from "@angular/flex-layout";
 import { OrderModule } from './modules/order/order.module';
 import { underConstruction } from './modules/underConstruction/underConstruction.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
+import {MatTabsModule} from '@angular/material/tabs';
 
 
 @NgModule({
@@ -44,6 +47,9 @@ import { underConstruction } from './modules/underConstruction/underConstruction
     MatInputModule,
     FormsModule,
     FlexLayoutModule,
+    MatCardModule,
+    MatButtonModule,
+    MatTabsModule,
     // OrderModule
     // MatMenuModule;
   ],

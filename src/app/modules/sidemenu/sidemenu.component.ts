@@ -11,6 +11,27 @@ import { ActivatedRoute, Router } from '@angular/router';
 
 export class SideMenuComponent {
 
+    menuItems = [
+        {
+            name : 'Dashboard',
+            navigationUrl : 'dashboard',
+            IconClass : 'Material',
+            IconName: 'dashboard'
+        },
+        {
+            name : 'Products',
+            navigationUrl : 'products',
+            IconClass : 'Material',
+            IconName: 'view_module'
+        },
+        {
+            name : 'Order',
+            navigationUrl : 'order',
+            IconClass : 'Material',
+            IconName: 'add_shopping_cart'
+        }
+    ]
+
     constructor(
         private sharedService: SharedService,
         private router : Router,

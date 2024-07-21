@@ -1,14 +1,6 @@
 <div class="main-container">
-    <div class="menu-container">
-        <mat-icon class='menu-icon' (click)="navigate('Dashboard')">dashboard</mat-icon>
-        <span class="menu-text-dashboard">Dashboard</span>            
-    </div>
-    <div>
-        <mat-icon class='menu-icon' (click)="navigate('Products')">view_module</mat-icon>
-        <span class="menu-text-list">Products</span>
-    </div>
-    <div class="menu-container">
-        <mat-icon class='menu-icon' (click)="navigate('underConstruction')">add_shopping_cart</mat-icon>
-        <span class="menu-text-home">Orders</span>            
+    <div class="menu-container" *ngFor="let item of menuItems">
+        <mat-icon class='menu-icon' (click)="navigate(item.navigationUrl)">{{item.IconName}}</mat-icon>
+        <span class="menu-text-dashboard">{{item.name}}</span>            
     </div>
 </div> 

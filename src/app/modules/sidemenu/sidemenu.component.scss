@@ -1,28 +1,36 @@
 .main-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 .menu-icon{
-    padding: 18px;
-    font-size: 40px;
     color: white;
     cursor: pointer;
+    font-size: 32px;
+    margin-bottom: 5px; 
 }
 
 .menu-text-home{
     color: antiquewhite;
     font-size: 0.9em;
-    padding-left: 20px;
-
 }
 
 .menu-text-list{
     color: antiquewhite;
     font-size: 0.9em;
-    padding-left: 14px;
 }
 
 .menu-text-dashboard{
     color: antiquewhite;
     font-size: 0.9em;
-    padding-left: 10px;
+}
+
+.menu-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }

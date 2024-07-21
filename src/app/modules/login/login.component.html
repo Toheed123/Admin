@@ -1,1 +1,30 @@
-<p>login works!</p>
+<div class="main-container">
+    <mat-card class="example-card" appearance="outlined">
+        <mat-card-header>
+          <!-- <img  src="../../../assets/logo-img.png"> -->
+        </mat-card-header>
+        <mat-card-content>
+          <mat-tab-group >
+            <mat-tab > 
+              <form [formGroup]="loginForm" class="form-container">
+
+                <mat-form-field fxFlex.gt-md="100">
+                  <mat-label>UserId </mat-label>
+                  <input matInput formControlName="userName">
+                  <mat-icon class="pd-0" matPrefix>person</mat-icon>
+                </mat-form-field>
+    
+                <mat-form-field fxFlex.gt-md="100">
+                  <mat-label>Password</mat-label>
+                  <input matInput type="password" formControlName="password">
+                  <mat-icon matPrefix class="pd-0">lock</mat-icon>
+                </mat-form-field>
+    
+                <button mat-flat-button color="primary">Login</button>
+    
+              </form>
+             </mat-tab>
+          </mat-tab-group>         
+        </mat-card-content>
+      </mat-card>
+</div>

@@ -19,7 +19,7 @@ $warn-light: mat.get-color-from-palette($app-warn, lighter);
 }
 
 .sidenave-container {
-    width: 80px !important;
+    width: 100px !important;
     background-color: #24252b;
     //  height: 100%
 }
@@ -51,7 +51,7 @@ $warn-light: mat.get-color-from-palette($app-warn, lighter);
 
 .size{
     color: antiquewhite;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 .color{
@@ -78,5 +78,5 @@ $warn-light: mat.get-color-from-palette($app-warn, lighter);
 }
 
 .subtitle{
-    font-size: 30px;
+    font-size: 22px;
 }
