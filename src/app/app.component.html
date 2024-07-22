@@ -1,4 +1,4 @@
-<mat-drawer-container class="example-container" *ngIf="false">
+<mat-drawer-container class="example-container" *ngIf="true">
     <mat-drawer #drawer mode="side" class="sidenave-container" opened="true">
         <div>
             <img src='../assets/logo.png' class="logo">
@@ -24,7 +24,7 @@
                             </div>      
                 </mat-toolbar-row>               
             </mat-toolbar>        
+            <router-outlet></router-outlet>
         </div>
     </mat-drawer-container>
-    <router-outlet></router-outlet>
 
