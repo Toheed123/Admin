@@ -1,5 +1,6 @@
  .example-card {
     // max-width: 500px;
+    width: 450px;
     height: auto;
     border-radius: 15px;
     padding: 20px 40px 20px;
@@ -30,7 +31,28 @@
   padding-bottom: 0px  !important
 }
 
-::ng-deep .mat-tab-header {
+.pd-34{
+  padding-left: 34px;
+}
+
+.card-header{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.link{
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+::ng-deep .mat-mdc-tab-header{
   display: none !important;
+}
+
+.register-p{
+  color: #673ab7;
+  cursor: pointer;
 }
 
