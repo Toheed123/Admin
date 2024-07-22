@@ -17,7 +17,7 @@ const routes: Routes = [
 
   //if url not found or match
 
-  { path: '' , redirectTo : "/dashboard", pathMatch:'full'},
+  { path: '' , redirectTo : "/login", pathMatch:'full'},
   {path: '**' , component: pageNotFoundComponent},
   { path: '404-not-found' , component : pageNotFoundComponent}
 
