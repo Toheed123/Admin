@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Route, Router } from '@angular/router';
+import { AuthenticationService } from 'src/app/core/service/authentication.service';
 
 @Component({
   selector: 'app-login',
@@ -10,20 +12,24 @@ export class LoginComponent {
 
   loginForm : FormGroup ;
   forgotPasswordForm : FormGroup;
-  selectedTabIndex : number;
+  signUpForm : FormGroup;
+  selectedTabIndex : number = 0;
+  isLoading : boolean = false;
   tabContainer = {
     forgotPassword : {
       tabIndex : 1,
       tabName : "Forgot Password"
     },
-    signIn : {
+    signUp : {
       tabIndex : 2,
-      tabName : "Sing In"
+      tabName : "Sing Up"
     }
 }
 
   constructor(
     private formBuilder : FormBuilder,
+    private authenticationService : AuthenticationService,
+    private router : Router,
   ){
     this.loginForm = this.formBuilder.group({
       userName:[[],[Validators.required]],
@@ -31,6 +37,14 @@ export class LoginComponent {
     })
     this.forgotPasswordForm = this.formBuilder.group({
       email:[[],[Validators.required, Validators.email]],
+    })
+    this.signUpForm = this.formBuilder.group({
+      Email:[[],[Validators.required, Validators.email]],
+      Name:[[],[Validators.required]],
+      Password:[[],[Validators.required]],
+      PhoneNo:[[],[Validators.required]],
+      ISDCode:[[],[Validators.required]],
+      ConfirmPassword:[[],[Validators.required]],
     })
   }
   ngOnInIt(){
@@ -41,11 +55,23 @@ export class LoginComponent {
 
   get forgotPasswordFormControls(){return this.forgotPasswordForm.controls}
 
+  get signUpFormControls(){return this.signUpForm.controls}
+
+
   changeTab(tabIndex : any){
     this.selectedTabIndex = tabIndex
   }
 
   cancel(){
     this.selectedTabIndex = 0
+  }
+
+  OnClick(){
+    this.isLoading = true
+    setTimeout(() => {
+      this.authenticationService.isLogin.next(true)
+    this.router.navigate(['dashboard'])
+      this.isLoading = false
+    }, 2000)
   }
 }

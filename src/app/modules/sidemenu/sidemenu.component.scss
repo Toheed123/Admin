@@ -5,11 +5,21 @@
     justify-content: center;
     align-items: center;
 }
+
 .menu-icon{
     color: white;
     cursor: pointer;
-    font-size: 32px;
+    font-size: 50px;
     margin-bottom: 5px; 
+    overflow: visible;
+}
+
+.menu-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .menu-text-home{
@@ -24,13 +34,6 @@
 
 .menu-text-dashboard{
     color: antiquewhite;
-    font-size: 0.9em;
+    font-size: 15px;
 }
 
-.menu-container{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}

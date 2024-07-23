@@ -15,7 +15,7 @@ $warn-light: mat.get-color-from-palette($app-warn, lighter);
     height: 80px;
     width: 70px;
     cursor: pointer;
-    padding: 4px;
+    padding-top: 10px;
 }
 
 .sidenave-container {
@@ -32,11 +32,16 @@ $warn-light: mat.get-color-from-palette($app-warn, lighter);
     top: 0px;
 }
 
+.center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .center-align {
     color: antiquewhite;
     font-size: 0.9em;
-    padding: 4px;
-
 }
 
 .pd-8 {
@@ -78,5 +83,5 @@ $warn-light: mat.get-color-from-palette($app-warn, lighter);
 }
 
 .subtitle{
-    font-size: 22px;
+    font-size: 21px;
 }

@@ -1,6 +1,8 @@
 <div class="main-container">
     <div class="menu-container" *ngFor="let item of menuItems">
         <mat-icon class='menu-icon' (click)="navigate(item.navigationUrl)">{{item.IconName}}</mat-icon>
+        <br>
         <span class="menu-text-dashboard">{{item.name}}</span>            
+        <br>
     </div>
 </div> 

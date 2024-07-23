@@ -1,14 +1,14 @@
 <div class="main-container">
     <mat-card class="example-card" appearance="outlined">
+      <mat-progress-bar mode="indeterminate" *ngIf="isLoading"></mat-progress-bar>
         <mat-card-header class="card-header">
           <img  src="../../../assets/logo-1.jpg" >
         </mat-card-header>
         <mat-card-content>
           <mat-tab-group mat-stretch-tabs="false" headerPosition="below" [selectedIndex]="selectedTabIndex">
-
             <mat-tab > 
               <form [formGroup]="loginForm" class="form-container">
-                <mat-form-field fxFlex.gt-md="100">
+                <mat-form-field fxFlex.gt-md="100%">
                   <mat-label>UserId </mat-label>
                   <input matInput formControlName="userName">
                   <mat-icon class="pd-0" matPrefix>person</mat-icon>
@@ -28,9 +28,12 @@
                 </mat-form-field>
                 <br>
     
-                <button mat-flat-button color="primary">Login</button>
+                <button mat-flat-button color="primary" [disabled]="isLoading" class="login-button" [class.loading]="isLoading" (click)="OnClick()">
+                  <div class="loader" ></div>
+                  <span class="button-text">Login</span>
+                </button>
                 <br>
-                <p>Don't have an account<span class="register-p" (click)="changeTab(tabContainer.signIn.tabIndex)"> Register</span></p>
+                <p>Don't have an account<span class="register-p" (click)="changeTab(tabContainer.signUp.tabIndex)"> Register</span></p>
               </form>
              </mat-tab>
                     
@@ -46,7 +49,7 @@
                 </mat-form-field>
 
                 <div fxLayout="column" fxLayoutGap="10px">
-                  <button mat-flat-button color="primary">Verify</button>
+                  <button mat-flat-button color="primary" [disabled]="isLoading" (click)="OnClick()">Verify</button>
 
                 <button mat-stroked-button color="primary" type="button" (click)="cancel()">Cancel</button>
                 </div>                
@@ -54,12 +57,61 @@
              </mat-tab>
 
              <mat-tab>
-              <form class="form-container">
+              <form class="form-container" [formGroup]="signUpForm">
+
+                <mat-form-field fxFlex.gt-md="100%">
+                  <mat-label>Name </mat-label>
+                  <input matInput formControlName="Name">                 
+                  <mat-error class="pd-34" *ngIf="(signUpFormControls.Name.touched) && signUpFormControls.Name.errors?.required">
+                    require
+                  </mat-error>
+                </mat-form-field>
+
+                <mat-form-field fxFlex.gt-md="100%">
+                  <mat-label>Email </mat-label>
+                  <input matInput formControlName="Email">                  
+                  <mat-error class="pd-34" *ngIf="(signUpFormControls.Email.touched) && signUpFormControls.Email.errors?.required">
+                    require
+                  </mat-error>
+                </mat-form-field>
+
+                <div fxFlex.gt-md="100%" fxLayoutGap="10px">
+                  <mat-form-field fxFlex.gt-md="20%">
+                    <mat-label>ISD Code </mat-label>
+                    <input matInput formControlName="ISDCode">          
+                    <mat-error class="pd-34" *ngIf="(signUpFormControls.ISDCode.touched) && signUpFormControls.ISDCode.errors?.required">
+                      require
+                    </mat-error>
+                  </mat-form-field>
+
+                  <mat-form-field fxFlex.gt-md="80%">
+                    <mat-label>Phone No</mat-label>
+                    <input matInput formControlName="PhoneNo">                  
+                    <mat-error class="pd-34" *ngIf="(signUpFormControls.PhoneNo.touched) && signUpFormControls.PhoneNo.errors?.required">
+                      require
+                    </mat-error>
+                  </mat-form-field>
+                </div>
+
+                <mat-form-field fxFlex.gt-md="100%">
+                  <mat-label>Password </mat-label>
+                  <input matInput formControlName="Password">                  
+                  <mat-error class="pd-34" *ngIf="(signUpFormControls.Password.touched) && signUpFormControls.Password.errors?.required">
+                    require
+                  </mat-error>
+                </mat-form-field>
+
+                <mat-form-field fxFlex.gt-md="100%">
+                  <mat-label>Confirm Password </mat-label>
+                  <input matInput formControlName="ConfirmPassword">                  
+                  <mat-error class="pd-34" *ngIf="(signUpFormControls.ConfirmPassword.touched) && signUpFormControls.ConfirmPassword.errors?.required">
+                    require
+                  </mat-error>
+                </mat-form-field>
 
                 <div fxLayout="column" fxLayoutGap="10px">
-                  <button mat-flat-button color="primary">SignUp</button>
-
-                <button mat-stroked-button color="primary" type="button" (click)="cancel()">Cancel</button>
+                  <button mat-flat-button color="primary" [disabled]="isLoading" (click)="OnClick()">SignUp</button>
+                  <button mat-stroked-button color="primary" type="button" (click)="cancel()">Cancel</button>
                 </div>              
               </form>
              </mat-tab>
