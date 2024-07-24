@@ -1,6 +1,7 @@
 import { Component } from '@angular/core'
 import { SharedService } from 'src/app/core/service/shared.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NotificationService } from 'src/app/core/service/notification.service';
 
 @Component( {
     selector: 'app-sidemenu',
@@ -35,7 +36,8 @@ export class SideMenuComponent {
     constructor(
         private sharedService: SharedService,
         private router : Router,
-        private route : ActivatedRoute
+        private route : ActivatedRoute,
+        private snackBarService : NotificationService
     ) {
 
     }
@@ -43,13 +45,12 @@ export class SideMenuComponent {
     ngOnInit(){
         this.sharedService.sideMenuName.subscribe((val) => {
         });
-
-        
     }
 
     navigate(name: string) {
         this.sharedService.sideMenuName.next(name);
         let url = name.toLowerCase();        
         this.router.navigate([url], {relativeTo: this.route})
+        this.snackBarService.warning('Success','Login successfully!', 500000)
     }
 }

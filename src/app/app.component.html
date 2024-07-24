@@ -11,7 +11,7 @@
                 <mat-toolbar-row>
                             <mat-icon (click)="drawer.toggle()" class="pd-8 color">menu</mat-icon>
                             <div class="size">
-                                <span>STITCHER</span> &nbsp;
+                                <span>Admin Portal</span> &nbsp;
                                 <span *ngIf="name">
                                     <mat-icon class="right-arrow">keyboard_arrow_right</mat-icon> &nbsp;
                                     <!-- <mat-icon class="icon-size">{{iconName}}</mat-icon> -->
@@ -25,6 +25,7 @@
                 </mat-toolbar-row>               
             </mat-toolbar>        
             <router-outlet *ngIf="(authenticatioService.isLogin | async)"></router-outlet>
+            <app-notification></app-notification>
         </div>
     </mat-drawer-container>
     <router-outlet *ngIf="!(authenticatioService.isLogin | async)" ></router-outlet>

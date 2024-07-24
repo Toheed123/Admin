@@ -23,6 +23,8 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { NotificationService } from './core/service/notification.service';
+import { SharedModule } from './shared/component/shared.module';
 
 
 @NgModule({
@@ -52,6 +54,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatButtonModule,
     MatTabsModule,
     MatProgressBarModule,
+    SharedModule
     // OrderModule
     // MatMenuModule;
   ],
@@ -60,7 +63,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
     MatFormFieldModule,
     
     ],
-  providers: [],
+  providers: [NotificationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

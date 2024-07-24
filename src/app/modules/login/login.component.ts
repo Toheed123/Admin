@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Route, Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/core/service/authentication.service';
+import { NotificationService } from 'src/app/core/service/notification.service';
 
 @Component({
   selector: 'app-login',
@@ -30,6 +31,7 @@ export class LoginComponent {
     private formBuilder : FormBuilder,
     private authenticationService : AuthenticationService,
     private router : Router,
+    private snackBarService : NotificationService
   ){
     this.loginForm = this.formBuilder.group({
       userName:[[],[Validators.required]],
