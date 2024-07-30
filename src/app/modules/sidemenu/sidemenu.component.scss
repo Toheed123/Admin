@@ -37,3 +37,13 @@
     font-size: 15px;
 }
 
+::ng-deep .warning{
+    background-color: yellowgreen !important;
+ }
+
+ ::ng-deep .mat-mdc-snack-bar-container.blue-snackbar {
+    --mdc-snackbar-container-color: #2196f3;
+    --mat-mdc-snack-bar-button-color: #fff;
+    --mdc-snackbar-supporting-text-color: #fff;
+  }
+

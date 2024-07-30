@@ -2,6 +2,7 @@ import { Component } from '@angular/core'
 import { SharedService } from 'src/app/core/service/shared.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NotificationService } from 'src/app/core/service/notification.service';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component( {
     selector: 'app-sidemenu',
@@ -37,7 +38,8 @@ export class SideMenuComponent {
         private sharedService: SharedService,
         private router : Router,
         private route : ActivatedRoute,
-        private snackBarService : NotificationService
+        private notificationService : NotificationService,
+        private snackBarService : MatSnackBar        
     ) {
 
     }
@@ -51,6 +53,11 @@ export class SideMenuComponent {
         this.sharedService.sideMenuName.next(name);
         let url = name.toLowerCase();        
         this.router.navigate([url], {relativeTo: this.route})
-        this.snackBarService.warning('Success','Login successfully!', 500000)
+        this.snackBarService.open('Added successfully!!!', '',{
+            horizontalPosition: 'right',
+            verticalPosition: 'bottom',
+            duration : 100 * 1000,
+            panelClass: ['warning']
+          })
     }
 }

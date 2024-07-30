@@ -25,6 +25,7 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { NotificationService } from './core/service/notification.service';
 import { SharedModule } from './shared/component/shared.module';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { SharedModule } from './shared/component/shared.module';
     SideMenuComponent,
     pageNotFoundComponent,
     DemoComponent,
-    underConstruction
+    underConstruction,
+    
   ],
   imports: [
     CommonModule,
@@ -63,7 +65,7 @@ import { SharedModule } from './shared/component/shared.module';
     MatFormFieldModule,
     
     ],
-  providers: [NotificationService],
+  providers: [NotificationService, MatSnackBar],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
