@@ -5,6 +5,12 @@ import { ProductRoutingModule } from './product-routing.module';
 import { ProductListComponent } from './list/product-list.component';
 import {CurrencyPipe} from '@angular/common';
 import {MatTableModule} from '@angular/material/table';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -15,7 +21,13 @@ import {MatTableModule} from '@angular/material/table';
     CommonModule,
     ProductRoutingModule,
     MatTableModule,
-    CurrencyPipe
+    CurrencyPipe,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatButtonModule,
+    MatIconModule,
+    FlexLayoutModule
   ]
 })
 export class ProductModule { }
