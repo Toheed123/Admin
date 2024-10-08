@@ -8,19 +8,20 @@
             </div>s
         </div> -->
 
-        <div class="filter-container">
+        <div class="filter-container" fxLayoutGap="20px">
             <p>{{filteredData.length > 1 ? 'Items' : 'Item'}}<span>&nbsp;{{filteredData.length}}</span></p>
-            <div  class="filter-form" > 
-                <form [formGroup]="searchForm" fxFlex>
-                    <mat-form-field class="example-full-width" appearance="outline" fxFlex="100%">
+            <!-- <div  class="filter-form" >  -->
+                <form [formGroup]="searchForm" fxFlex="50%">
+                    <mat-form-field class="example-full-width ml-10" appearance="outline" fxFlex="100%">
                         <mat-label>Search</mat-label>
                         <input matInput  formControlName="searchInput">
+                        <span matPrefix class="ml-10"><mat-icon>search</mat-icon></span>
                       </mat-form-field>
                 </form>
-                <button mat-flat-button class="search-btn" type="button" (click)="onSearch()"><mat-icon>search</mat-icon>Search</button>
-                <button mat-flat-button class="reset-btn" type="button" (click)="reset()"><mat-icon>close</mat-icon>Reset</button>
-                <button mat-raised-button type="button"><mat-icon>format_list_bulleted_add</mat-icon>Add New Product</button>
-            </div>
+                <!-- <button mat-flat-button class="search-btn" type="button" (click)="onSearch()"><mat-icon>search</mat-icon>Search</button>
+                <button mat-flat-button class="reset-btn" type="button" (click)="reset()"><mat-icon>close</mat-icon>Reset</button> -->
+                <button mat-raised-button type="button" (click)="addProduct()"><mat-icon>format_list_bulleted_add</mat-icon>Add New Product</button>
+            <!-- </div> -->
         </div>
 
         <table mat-table [dataSource]="filteredData" class="mat-elevation-z8">
@@ -43,4 +44,5 @@
             <!-- <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr> -->
         </table>
     </div>
+    <router-outlet></router-outlet>
 </div>

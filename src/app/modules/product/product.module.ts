@@ -11,11 +11,13 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { ProductAddComponent } from './add/product-add.component';
 
 
 @NgModule({
   declarations: [
-    ProductListComponent
+    ProductListComponent,
+    ProductAddComponent
   ],
   imports: [
     CommonModule,

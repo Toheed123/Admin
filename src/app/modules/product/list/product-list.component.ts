@@ -1,5 +1,8 @@
 import { Component} from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import { ActivatedRoute, Route, Router } from '@angular/router';
+import { debounceTime, distinctUntilChanged } from 'rxjs';
+// import { isEqual } from 'lodash';
 
 interface Transaction {
     item: string;
@@ -32,9 +35,23 @@ export class ProductListComponent{
 
     constructor(
       private formBuilder: FormBuilder,
+      private router : Router,
+      private route : ActivatedRoute,
+      
     ){
       this.createForm()
       this.filteredData = this.transactions
+    }
+
+    ngOnInit(){
+
+    }
+
+    ngAfterViewInit(){
+      this.searchForm.valueChanges.pipe( /* distinctUntilChanged(isEqual) */ debounceTime(500))
+      .subscribe((val )=> {
+        this.onSearch()
+      })
     }
 
     createForm(){
@@ -52,15 +69,18 @@ export class ProductListComponent{
     }
 
     onSearch(){
-      if(this.searchFormControls.searchInput.value){
-        console.log(this.searchFormControls.searchInput.value)
-        this.filteredData = this.transactions.filter((val) => val.item.toUpperCase().includes(this.searchFormControls.searchInput.value.toUpperCase()))
-        console.log(this.filteredData)
-      }
+      // if(this.searchFormControls.searchInput.value){
+      let searchInputValue = this.searchFormControls.searchInput.value.toUpperCase();
+        this.filteredData = this.transactions.filter((val) => val.item.toUpperCase().includes(searchInputValue))
+      // }
     }
 
     reset(){
       this.searchForm.reset()
       this.filteredData  = this.transactions
+    }
+
+    addProduct(){
+      this.router.navigate(['add'], {relativeTo : this.route});
     }
 }

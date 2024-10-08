@@ -31,9 +31,7 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.scss",
-              "src/theam/custom-theam.scss"
-            ],
+              "src/styles.scss"            ],
             "scripts": []
           },
           "configurations": {
@@ -96,8 +94,7 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "src/styles.scss",
-              "src/theam/custom-theam.scss"
+              "src/styles.scss"
             ],
             "scripts": []
           }
